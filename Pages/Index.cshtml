@@ -1,0 +1,18 @@
+﻿@page
+@using System.Drawing;
+@model IndexModel
+@{
+    Random random = new Random();
+    int R = random.Next(0, 255);
+    int G = random.Next(0, 255);
+    int B = random.Next(0, 255);
+
+    string colorHex = "#" + R.ToString("X2") + G.ToString("X2") + B.ToString("X2");
+
+}
+
+<div class="text-center">
+
+    <h1 style="color:@colorHex">Hello now time is @DateTime.UtcNow</h1>
+    <h2>@colorHex</h2>
+</div>
